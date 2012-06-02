@@ -1,0 +1,10 @@
+endPoint=https://urlParapheur.test.moi:443/ws-iparapheur
+user=webservice_user
+pass=webservice_pass
+trustStorePath=trust.jks
+trustStorePass=trustpass
+keyStorePath=key.jks
+keyStorePass=keyPass
+type=Bon de commande
+status=Archive
+outputPath=/tmp/
