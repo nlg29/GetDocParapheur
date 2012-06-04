@@ -1,0 +1,6 @@
+Usage
+
+1 _ Compiler ;)
+2 _ Déposer le jar accompagné du wsdl ainsi que du fichier de conf, dans un même répertoire
+3 _ Editer le fichier conf.cf
+4 _ Lancer le jar 
