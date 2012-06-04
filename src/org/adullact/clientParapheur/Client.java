@@ -31,6 +31,7 @@ public class Client {
 									configLoader.getTrustStorePass(),
 									configLoader.getKeyStorePath(),
 									configLoader.getKeyStorePass());
+		
 
 		/* Récupération tout document en fin de circuit
 		 * Création PDF
@@ -42,7 +43,8 @@ public class Client {
 				documentExploiteur = new DocumentExploiteur(ProxyParapheur.appelGetDossier(dossier.getNom()));
 				if (documentExploiteur.isSigned()){
 					documentExploiteur.writePdf(configLoader.getOutputPath());
-					ProxyParapheur.appelArchiverDossier(dossier.getNom());
+					if (configLoader.doArchive())
+						ProxyParapheur.appelArchiverDossier(dossier.getNom());
 				}
 			}
 	}

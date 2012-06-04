@@ -7,7 +7,7 @@ import java.util.Properties;
 public class ConfigLoader {
 	
 	Properties cf;
-	private static String type,status,outputPath,endPoint,user,pass,trustStorePass,trustStorePath,keyStorePath,keyStorePass;
+	private static String type,status,outputPath,endPoint,user,pass,trustStorePass,trustStorePath,keyStorePath,keyStorePass,actionArchive;
 	
 	public ConfigLoader(String path) throws IOException{
 		//Chargemenet de l'ensemble de la config 
@@ -27,8 +27,19 @@ public class ConfigLoader {
 		type 			= cf.getProperty("type");
 		status 			= cf.getProperty("status");
 		outputPath 		= cf.getProperty("outputPath");
+		actionArchive	= cf.getProperty("actionArchive");
 	}
 	
+	public boolean doArchive(){
+		if (actionArchive.equals("archiver"))
+			return true;
+		return false;
+	}
+	
+	public String getActionArchive() {
+		return actionArchive;
+	}
+
 	public String getType() {
 		return type;
 	}

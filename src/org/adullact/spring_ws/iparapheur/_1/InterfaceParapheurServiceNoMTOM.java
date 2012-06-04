@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "InterfaceParapheurServiceNoMTOM", targetNamespace = "http://www.adullact.org/spring-ws/iparapheur/1.0", wsdlLocation = "file:/home/legranni/workspace/manuel/iparapheur.wsdl")
+@WebServiceClient(name = "InterfaceParapheurServiceNoMTOM", targetNamespace = "http://www.adullact.org/spring-ws/iparapheur/1.0", wsdlLocation = "file:./iparapheur.wsdl")
 public class InterfaceParapheurServiceNoMTOM
     extends Service
 {
@@ -30,7 +30,7 @@ public class InterfaceParapheurServiceNoMTOM
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("file:/home/legranni/workspace/manuel/iparapheur.wsdl");
+            url = new URL("file:./iparapheur.wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
