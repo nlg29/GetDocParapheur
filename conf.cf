@@ -1,4 +1,4 @@
-endPoint=https://paraph.local:443/ws-iparapheur
+endPoint=https://iparaph.local:443/ws-iparapheur
 user=webservice
 pass=webservice
 trustStorePath=trust.jks

@@ -1,7 +1,5 @@
 package org.adullact.clientParapheur;
 
-import java.io.IOException;
-
 import org.adullact.spring_ws.iparapheur._1.DocumentExploiteur;
 import org.adullact.spring_ws.iparapheur._1.LogDossier;
 import org.adullact.spring_ws.iparapheur._1.RechercherDossiersResponse;
@@ -19,11 +17,8 @@ public class Client {
 	public static void main(String[] args) {
 
 		//Chargement de la configuration 
-		try {
-			configLoader = new ConfigLoader(confPath);
-		} catch (IOException e) {}
-
-		//Creation du proxy d'acces au parapheur
+		configLoader = new ConfigLoader(confPath);
+		
 		proxy = new ProxyParapheur(	configLoader.getendPoint(),
 									configLoader.getUser(),
 									configLoader.getPass(),
@@ -37,6 +32,7 @@ public class Client {
 		 * Création PDF
 		 * Archivage du Dossier
 		 */
+		
 		RechercherDossiersResponse rechercheDossiersResponse = ProxyParapheur.appelRechercheDossier(configLoader.getType(),configLoader.getStatus());
 		if (rechercheDossiersResponse.getLogDossier() != null)
 			for (LogDossier dossier : rechercheDossiersResponse.getLogDossier()){
